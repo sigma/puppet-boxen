@@ -18,6 +18,7 @@ if RUBY_PLATFORM =~ /darwin/
   facts["boxen_repodir"]  = config.repodir
   facts["boxen_reponame"] = config.reponame
   facts["boxen_user"]     = config.user
+  facts["boxen_homebrew"] = config.homebrewdir
   facts["luser"]          = config.user # this is goin' away
 
   facts["boxen_repo_url_template"] = config.repotemplate if config.respond_to? :repotemplate
@@ -33,6 +34,7 @@ else
   facts["boxen_repodir"]  = ENV['BOXEN_REPODIR']
   facts["boxen_reponame"] = ENV['BOXEN_REPONAME']
   facts["boxen_user"]     = ENV['BOXEN_USER']
+  facts["boxen_homebrew"] = ENV['BOXEN_HOMEBREWDIR']
   facts["luser"]          = ENV['BOXEN_USER']
 
   facts["boxen_repo_url_template"] = ENV['BOXEN_REPO_URL_TEMPLATE']
